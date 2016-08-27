@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/tab_adopt"
+        icon="@drawable/ic_dog"
+        title="Adopt" />
+    <tab
+        id="@+id/tab_donate"
+        icon="@drawable/ic_donate"
+        title="Donate" />
+    <tab
+        id="@+id/tab_foster"
+        icon="@drawable/ic_doghouse"
+        title="Foster" />
+    <tab
+        id="@+id/tab_volunteer"
+        icon="@drawable/ic_volunteer"
+        title="Volunteer" />
+</tabs>
