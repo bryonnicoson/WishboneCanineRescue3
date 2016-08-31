@@ -1,8 +1,11 @@
 package com.bryonnicoson.wbcr;
 
+import android.support.v7.app.ActionBar;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Spannable;
+import android.text.SpannableString;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity  {
@@ -11,6 +14,15 @@ public class MainActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // custom font implementation for title
+        SpannableString s = new SpannableString("WishBone Canine Rescue");
+        s.setSpan(new TypefaceSpan(this, "Balham.otf"), 0, s.length(),
+                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+        // Update the action bar title with the TypefaceSpan instance
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(s);
 
 //        findViewById(R.id.bottom_nav_adopt).setOnClickListener(this);
 //        findViewById(R.id.bottom_nav_donate).setOnClickListener(this);
